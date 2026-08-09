@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCardTiltEffect();
   initMobileMenu();
   initContactForm();
+  initBackToTop();
 });
 
 
@@ -347,5 +348,24 @@ function initContactForm() {
       submitBtn.textContent = originalText;
       submitBtn.style.background = '';
     }, 3000);
+  });
+}
+
+
+/* ---------- Back to Top Button ---------- */
+function initBackToTop() {
+  const btn = document.getElementById('backToTop');
+  if (!btn) return;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 600) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  }, { passive: true });
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
