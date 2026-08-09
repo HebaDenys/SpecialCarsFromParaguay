@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SudAmerica Auto Elite — Auto d'epoca, rally e supercar dal Paraguay a prezzi imbattibili. Spedizione in tutta Italia ed Europa con garanzia di qualità.">
+  <meta name="keywords" content="auto d'epoca, auto classiche, rally car, supercar, Paraguay, importazione auto, auto storiche, classic cars">
+  <meta name="author" content="SudAmerica Auto Elite">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="SudAmerica Auto Elite — Auto Esclusive dal Paraguay">
+  <meta property="og:description" content="Trova l'auto dei tuoi sogni dal cuore del Sudamerica. Classiche, rally e supercar a prezzi imbattibili.">
+  <meta property="og:type" content="website">
+
+  <title>SudAmerica Auto Elite — Auto d'Epoca, Rally e Supercar dal Paraguay</title>
+
+  <!-- Favicon (inline SVG as data URI) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏎️</text></svg>">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Page Loader ===== -->
+  <div class="page-loader" id="pageLoader">
+    <div class="page-loader__spinner"></div>
+  </div>
+
+
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="#" class="navbar__logo">
+        <div class="navbar__logo-icon">🏎️</div>
+        <div class="navbar__logo-text">
+          SudAmerica <span>Auto Elite</span>
+        </div>
+      </a>
+
+      <div class="navbar__links" id="navLinks">
+        <a href="#catalogo" class="navbar__link">Catalogo</a>
+        <a href="#chi-siamo" class="navbar__link">Chi Siamo</a>
+        <a href="#come-funziona" class="navbar__link">Come Funziona</a>
+        <a href="#contatti" class="navbar__link">Contatti</a>
+        <a href="#contatti" class="btn btn--primary navbar__cta">Richiedi Info</a>
+      </div>
+
+      <button class="navbar__toggle" id="navToggle" aria-label="Apri menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+
+  <!-- ===== Hero Section ===== -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <img src="img/hero/hero_background.png" alt="Auto sportiva classica su strada panoramica al tramonto" loading="eager">
+    </div>
+    <div class="hero__overlay"></div>
+
+    <!-- Animated gradient orbs -->
+    <div class="hero__orb hero__orb--cyan"></div>
+    <div class="hero__orb hero__orb--violet"></div>
+    <div class="hero__orb hero__orb--orange"></div>
+
+    <div class="container hero__content">
+      <div class="hero__badge">
+        Paraguay → Italia &amp; Europa
+      </div>
+
+      <h1 class="hero__title">
+        Auto Esclusive dal<br>
+        <span class="highlight">Cuore del Sudamerica</span>
+      </h1>
+
+      <p class="hero__description">
+        Scopri auto d'epoca, rally e supercar introvabili in Europa — a prezzi fino al 40% inferiori. 
+        Dal Paraguay alla tua porta, con ispezione certificata e logistica completa.
+      </p>
+
+      <div class="hero__actions">
+        <a href="#catalogo" class="btn btn--primary">
+          ⬇ Scopri il Catalogo
+        </a>
+        <a href="#come-funziona" class="btn btn--secondary">
+          ⚙ Come Funziona
+        </a>
+      </div>
+
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <div class="hero__stat-number" data-count="150" data-suffix="+">0</div>
+          <div class="hero__stat-label">Auto Vendute</div>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__stat-number" data-count="12" data-suffix="">0</div>
+          <div class="hero__stat-label">Paesi Serviti</div>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__stat-number" data-count="35" data-suffix="%" data-prefix="~">0</div>
+          <div class="hero__stat-label">Risparmio Medio</div>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__stat-number" data-count="8" data-suffix="">0</div>
+          <div class="hero__stat-label">Anni di Esperienza</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__scroll">
+      <span>Scorri</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+
+  <!-- ===== Catalog Section ===== -->
+  <section class="section catalog" id="catalogo">
+    <div class="bg-grid"></div>
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">Il Nostro Catalogo</span>
+        <h2 class="section__title">Trova la Tua <span class="text-gradient">Auto dei Sogni</span></h2>
+        <p class="section__subtitle">
+          Una selezione curata di auto d'epoca, rally e supercar disponibili in Paraguay, 
+          pronte per essere spedite direttamente a casa tua.
+        </p>
+      </div>
+
+      <!-- Filters -->
+      <div class="catalog__filters reveal">
+        <button class="catalog__filter active" data-filter="all">Tutte</button>
+        <button class="catalog__filter" data-filter="classica">🏛️ Classiche</button>
+        <button class="catalog__filter" data-filter="rally">🏁 Rally</button>
+        <button class="catalog__filter" data-filter="supercar">⚡ Supercar</button>
+        <button class="catalog__filter" data-filter="suv">🌍 SUV Premium</button>
+      </div>
+
+      <!-- Car Grid -->
+      <div class="catalog__grid">
+
+        <!-- Car 1: Alfa Romeo Spider -->
+        <div class="car-card reveal reveal-delay-1"
+             data-category="classica"
+             data-name="Alfa Romeo Spider 2000"
+             data-year="1972"
+             data-price="€28.500"
+             data-description="Un'icona del design italiano: la Spider 2000 incarna la dolce vita su quattro ruote. Carrozzeria Pininfarina, motore bialbero 2.0L che canta fino a 6000 giri. Restauro completo con verniciatura originale Rosso Alfa. Interni in pelle nera, capote funzionante. Un investimento sicuro per collezionisti esigenti."
+             data-engine="2.0L 4 cilindri bialbero"
+             data-power="131 CV"
+             data-km="67.000 km"
+             data-transmission="Manuale 5 marce">
+          <div class="car-card__image">
+            <span class="car-card__badge car-card__badge--classica">Classica</span>
+            <img src="img/cars/alfa_romeo_spider.png" alt="Alfa Romeo Spider 2000 rossa del 1972" loading="lazy">
+            <div class="car-card__overlay"></div>
+          </div>
+          <div class="car-card__body">
+            <h3 class="car-card__name">Alfa Romeo Spider 2000</h3>
+            <p class="car-card__year">1972 · Classica</p>
+            <div class="car-card__footer">
+              <span class="car-card__price">€28.500</span>
+              <span class="car-card__action">→</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Car 2: Lancia Delta HF Integrale -->
+        <div class="car-card reveal reveal-delay-2"
+             data-category="rally"
+             data-name="Lancia Delta HF Integrale"
+             data-year="1991"
+             data-price="€45.000"
+             data-description="La regina del rally mondiale: 6 titoli mondiali costruttori consecutivi dal 1987 al 1992. Questo esemplare del '91 presenta il motore 2.0 turbo 16V con 215 CV, trazione integrale permanente e differenziale Torsen. Livrea bianca Martini Racing non originale ma fedelmente riprodotta. Manutenzione maniacale con tutta la documentazione."
+             data-engine="2.0L Turbo 16V"
+             data-power="215 CV"
+             data-km="89.000 km"
+             data-transmission="Manuale 5 marce">
+          <div class="car-card__image">
+            <span class="car-card__badge car-card__badge--rally">Rally</span>
+            <img src="img/cars/lancia_delta.png" alt="Lancia Delta HF Integrale bianca del 1991" loading="lazy">
+            <div class="car-card__overlay"></div>
+          </div>
+          <div class="car-card__body">
+            <h3 class="car-card__name">Lancia Delta HF Integrale</h3>
+            <p class="car-card__year">1991 · Rally</p>
+            <div class="car-card__footer">
+              <span class="car-card__price">€45.000</span>
+              <span class="car-card__action">→</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Car 3: Porsche 911 Carrera (964) -->
+        <div class="car-card reveal reveal-delay-3"
+             data-category="supercar"
+             data-name="Porsche 911 Carrera (964)"
+             data-year="1990"
+             data-price="€62.000"
+             data-description="La 964 è considerata l'ultima vera 911 classica con le sue forme iconiche ma con l'aggiunta della trazione integrale e dell'ABS. Motore flat-six 3.6L raffreddato ad aria da 250 CV. Colore Argento Metallizzato con interni in pelle bordeaux. Revisione completa del motore a 95.000 km. Un classico che non smetterà mai di apprezzarsi."
+             data-engine="3.6L Flat-Six"
+             data-power="250 CV"
+             data-km="112.000 km"
+             data-transmission="Manuale 5 marce (G50)">
+          <div class="car-card__image">
+            <span class="car-card__badge car-card__badge--supercar">Supercar</span>
+            <img src="img/cars/porsche_911.png" alt="Porsche 911 Carrera 964 argento del 1990" loading="lazy">
+            <div class="car-card__overlay"></div>
+          </div>
+          <div class="car-card__body">
+            <h3 class="car-card__name">Porsche 911 Carrera (964)</h3>
+            <p class="car-card__year">1990 · Supercar</p>
+            <div class="car-card__footer">
+              <span class="car-card__price">€62.000</span>
+              <span class="car-card__action">→</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Car 4: Fiat 124 Sport Spider -->
+        <div class="car-card reveal reveal-delay-1"
+             data-category="classica"
+             data-name="Fiat 124 Sport Spider"
+             data-year="1975"
+             data-price="€19.800"
+             data-description="La piccola spider italiana che ha conquistato il mondo: design Pininfarina su meccanica Fiat affidabile. Motore 1.8L twin-cam con doppio Weber, capote manuale in ottimo stato. Colore Blu Chiaro Metallizzato originale. Perfetta per chi vuole entrare nel mondo delle classiche senza spendere una fortuna."
+             data-engine="1.8L Twin-Cam"
+             data-power="118 CV"
+             data-km="54.000 km"
+             data-transmission="Manuale 5 marce">
+          <div class="car-card__image">
+            <span class="car-card__badge car-card__badge--classica">Classica</span>
+            <img src="img/cars/fiat_124_spider.png" alt="Fiat 124 Sport Spider blu del 1975" loading="lazy">
+            <div class="car-card__overlay"></div>
+          </div>
+          <div class="car-card__body">
+            <h3 class="car-card__name">Fiat 124 Sport Spider</h3>
+            <p class="car-card__year">1975 · Classica</p>
+            <div class="car-card__footer">
+              <span class="car-card__price">€19.800</span>
+              <span class="car-card__action">→</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Car 5: Ford Escort RS Cosworth -->
+        <div class="car-card reveal reveal-delay-2"
+             data-category="rally"
+             data-name="Ford Escort RS Cosworth"
+             data-year="1994"
+             data-price="€38.000"
+             data-description="L'ultima vera Escort da rally omologata per la strada. Motore Cosworth YBT 2.0 turbo da 227 CV, trazione integrale permanente, e quell'inconfondibile alettone posteriore a doppio piano. Bianca con strisce blu racing. Solo 7.145 esemplari prodotti — un instant classic che sta salendo di valore vertiginosamente."
+             data-engine="2.0L Cosworth YBT Turbo"
+             data-power="227 CV"
+             data-km="72.000 km"
+             data-transmission="Manuale 5 marce (MT75)">
+          <div class="car-card__image">
+            <span class="car-card__badge car-card__badge--rally">Rally</span>
+            <img src="img/cars/ford_escort_rs.png" alt="Ford Escort RS Cosworth bianca del 1994" loading="lazy">
+            <div class="car-card__overlay"></div>
+          </div>
+          <div class="car-card__body">
+            <h3 class="car-card__name">Ford Escort RS Cosworth</h3>
+            <p class="car-card__year">1994 · Rally</p>
+            <div class="car-card__footer">
+              <span class="car-card__price">€38.000</span>
+              <span class="car-card__action">→</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Car 6: Mercedes-Benz 280 SL Pagoda -->
+        <div class="car-card reveal reveal-delay-3"
+             data-category="classica"
+             data-name="Mercedes-Benz 280 SL Pagoda"
+             data-year="1969"
+             data-price="€55.000"
+             data-description="La Pagoda è una delle Mercedes più eleganti mai prodotte: il tetto a pagoda concavo la rende immediatamente riconoscibile. Motore 2.8L 6 cilindri in linea a iniezione meccanica, cambio automatico a 4 rapporti. Color crema con interni in pelle cognac. Restauro conservativo di alta qualità. Un gioiello di ingegneria tedesca."
+             data-engine="2.8L 6 cilindri in linea"
+             data-power="170 CV"
+             data-km="128.000 km"
+             data-transmission="Automatico 4 marce">
+          <div class="car-card__image">
+            <span class="car-card__badge car-card__badge--classica">Classica</span>
+            <img src="img/cars/mercedes_pagoda.png" alt="Mercedes-Benz 280 SL Pagoda crema del 1969" loading="lazy">
+            <div class="car-card__overlay"></div>
+          </div>
+          <div class="car-card__body">
+            <h3 class="car-card__name">Mercedes-Benz 280 SL Pagoda</h3>
+            <p class="car-card__year">1969 · Classica</p>
+            <div class="car-card__footer">
+              <span class="car-card__price">€55.000</span>
+              <span class="car-card__action">→</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Car 7: Toyota Land Cruiser FJ40 -->
+        <div class="car-card reveal reveal-delay-1"
+             data-category="suv"
+             data-name="Toyota Land Cruiser FJ40"
+             data-year="1978"
+             data-price="€35.500"
+             data-description="Il FJ40 è il fuoristrada per eccellenza: nato per la giungla e le miniere, oggi è l'oggetto del desiderio di collezionisti in tutto il mondo. Motore 2F 4.2L a benzina, ridotte basse, ponti rigidi con bloccaggi. Colore Verde Oliva militare con soft-top rimovibile. Meccanicamente impeccabile, pronto per qualsiasi avventura."
+             data-engine="4.2L 6 cilindri (2F)"
+             data-power="135 CV"
+             data-km="145.000 km"
+             data-transmission="Manuale 4 marce + ridotte">
+          <div class="car-card__image">
+            <span class="car-card__badge car-card__badge--suv">SUV Premium</span>
+            <img src="img/cars/toyota_fj40.png" alt="Toyota Land Cruiser FJ40 verde oliva del 1978" loading="lazy">
+            <div class="car-card__overlay"></div>
+          </div>
+          <div class="car-card__body">
+            <h3 class="car-card__name">Toyota Land Cruiser FJ40</h3>
+            <p class="car-card__year">1978 · SUV Premium</p>
+            <div class="car-card__footer">
+              <span class="car-card__price">€35.500</span>
+              <span class="car-card__action">→</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Car 8: Subaru Impreza WRX STI -->
+        <div class="car-card reveal reveal-delay-2"
+             data-category="rally"
+             data-name="Subaru Impreza WRX STI"
+             data-year="1998"
+             data-price="€22.000"
+             data-description="La GC8 è la Impreza che ha fatto la storia con Colin McRae e Richard Burns. Motore boxer EJ20 turbo da 280 CV (dichiarati — in realtà di più), trazione integrale DCCD, e quel rombo inconfondibile dello scarico bialbero. Blu World Rally con cerchi dorati OZ Racing originali. Manutenzione certificata Subaru."
+             data-engine="2.0L Boxer Turbo (EJ20)"
+             data-power="280 CV"
+             data-km="96.000 km"
+             data-transmission="Manuale 5 marce">
+          <div class="car-card__image">
+            <span class="car-card__badge car-card__badge--rally">Rally</span>
+            <img src="img/cars/subaru_wrx_sti.png" alt="Subaru Impreza WRX STI blu del 1998" loading="lazy">
+            <div class="car-card__overlay"></div>
+          </div>
+          <div class="car-card__body">
+            <h3 class="car-card__name">Subaru Impreza WRX STI</h3>
+            <p class="car-card__year">1998 · Rally</p>
+            <div class="car-card__footer">
+              <span class="car-card__price">€22.000</span>
+              <span class="car-card__action">→</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Car 9: Ferrari 308 GTB -->
+        <div class="car-card reveal reveal-delay-3"
+             data-category="supercar"
+             data-name="Ferrari 308 GTB"
+             data-year="1980"
+             data-price="€78.000"
+             data-description="La 308 GTB è la Ferrari accessibile che ha definito un'era — resa immortale da Magnum P.I. Design Pininfarina con carrozzeria in vetroresina (i primi esemplari) e motore V8 3.0L trasversale. Rosso Corsa con interni Tan. Distribuzione rifatta, freni revisionati. Il biglietto d'ingresso più elegante nel mondo Ferrari."
+             data-engine="3.0L V8"
+             data-power="255 CV"
+             data-km="78.000 km"
+             data-transmission="Manuale 5 marce">
+          <div class="car-card__image">
+            <span class="car-card__badge car-card__badge--supercar">Supercar</span>
+            <img src="img/cars/ferrari_308.png" alt="Ferrari 308 GTB rossa del 1980" loading="lazy">
+            <div class="car-card__overlay"></div>
+          </div>
+          <div class="car-card__body">
+            <h3 class="car-card__name">Ferrari 308 GTB</h3>
+            <p class="car-card__year">1980 · Supercar</p>
+            <div class="car-card__footer">
+              <span class="car-card__price">€78.000</span>
+              <span class="car-card__action">→</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Car 10: Lancia Stratos Replica -->
+        <div class="car-card reveal reveal-delay-1"
+             data-category="rally"
+             data-name="Lancia Stratos (Replica)"
+             data-year="1985"
+             data-price="€52.000"
+             data-description="Replica artigianale della leggendaria Stratos, costruita su telaio tubolare con meccanica Ferrari Dino V6 2.4L. Design fedele all'originale di Marcello Gandini con carrozzeria in vetroresina. Solo 492 Stratos originali furono prodotte — questa replica è tra le più fedeli in circolazione. Livrea Marlboro/Alitalia bianca e rossa."
+             data-engine="2.4L Ferrari Dino V6"
+             data-power="190 CV"
+             data-km="23.000 km"
+             data-transmission="Manuale 5 marce">
+          <div class="car-card__image">
+            <span class="car-card__badge car-card__badge--rally">Rally</span>
+            <img src="img/cars/lancia_stratos.png" alt="Lancia Stratos replica rossa e bianca del 1985" loading="lazy">
+            <div class="car-card__overlay"></div>
+          </div>
+          <div class="car-card__body">
+            <h3 class="car-card__name">Lancia Stratos (Replica)</h3>
+            <p class="car-card__year">1985 · Rally</p>
+            <div class="car-card__footer">
+              <span class="car-card__price">€52.000</span>
+              <span class="car-card__action">→</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /catalog__grid -->
+    </div>
+  </section>
+
+
+  <!-- ===== About Section (Chi Siamo) ===== -->
+  <section class="section about" id="chi-siamo">
+    <div class="container">
+      <div class="about__grid">
+
+        <div class="about__image-wrapper reveal">
+          <img src="img/about/team_showroom.png" alt="Showroom SudAmerica Auto Elite con auto classiche" loading="lazy">
+          <div class="about__image-accent"></div>
+        </div>
+
+        <div class="about__text">
+          <span class="section__label reveal">Chi Siamo</span>
+          <h2 class="section__title reveal">
+            Passione, Competenza,<br><span class="text-gradient">Affidabilità</span>
+          </h2>
+          <p class="section__subtitle reveal">
+            SudAmerica Auto Elite nasce dalla passione per le auto classiche e dalla conoscenza profonda 
+            del mercato sudamericano. Da oltre 8 anni colleghiamo il Paraguay — dove auto rare e speciali 
+            si trovano ancora a prezzi accessibili — con collezionisti e appassionati in Italia e in tutta Europa.
+          </p>
+          <p class="section__subtitle reveal" style="margin-top: 1rem;">
+            Il nostro team ispeziona ogni veicolo in prima persona, gestisce tutta la burocrazia doganale 
+            e organizza il trasporto porta a porta. Nessuna sorpresa: solo auto verificate e prezzi trasparenti.
+          </p>
+
+          <div class="about__values reveal">
+            <div class="about__value">
+              <div class="about__value-icon">🔍</div>
+              <div>
+                <div class="about__value-title">Ispezione Certificata</div>
+                <div class="about__value-desc">Ogni auto è ispezionata da meccanici specializzati prima dell'acquisto</div>
+              </div>
+            </div>
+            <div class="about__value">
+              <div class="about__value-icon">🚢</div>
+              <div>
+                <div class="about__value-title">Logistica Completa</div>
+                <div class="about__value-desc">Trasporto marittimo, sdoganamento e consegna a domicilio inclusi</div>
+              </div>
+            </div>
+            <div class="about__value">
+              <div class="about__value-icon">📋</div>
+              <div>
+                <div class="about__value-title">Documenti in Regola</div>
+                <div class="about__value-desc">Gestiamo tutte le pratiche di immatricolazione e omologazione</div>
+              </div>
+            </div>
+            <div class="about__value">
+              <div class="about__value-icon">💰</div>
+              <div>
+                <div class="about__value-title">Prezzo Garantito</div>
+                <div class="about__value-desc">Preventivo vincolante senza costi nascosti né sorprese</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== Process Section (Come Funziona) ===== -->
+  <section class="section process" id="come-funziona">
+    <div class="bg-grid"></div>
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">Il Processo</span>
+        <h2 class="section__title">Come <span class="text-gradient">Funziona</span></h2>
+        <p class="section__subtitle">
+          Dal primo contatto alla consegna a domicilio: un processo semplice, trasparente e senza stress.
+        </p>
+      </div>
+
+      <div class="process__timeline">
+        <div class="process__step reveal reveal-delay-1">
+          <div class="process__step-number">1</div>
+          <span class="process__step-icon">🔎</span>
+          <h3 class="process__step-title">Scegli la Tua Auto</h3>
+          <p class="process__step-desc">
+            Sfoglia il nostro catalogo o dicci cosa cerchi. Ti proporremo le migliori opzioni disponibili.
+          </p>
+        </div>
+
+        <div class="process__step reveal reveal-delay-2">
+          <div class="process__step-number">2</div>
+          <span class="process__step-icon">💬</span>
+          <h3 class="process__step-title">Preventivo Personalizzato</h3>
+          <p class="process__step-desc">
+            Ricevi un preventivo completo: prezzo auto, trasporto, dogana e immatricolazione. Tutto incluso.
+          </p>
+        </div>
+
+        <div class="process__step reveal reveal-delay-3">
+          <div class="process__step-number">3</div>
+          <span class="process__step-icon">🔧</span>
+          <h3 class="process__step-title">Ispezione & Verifica</h3>
+          <p class="process__step-desc">
+            Il nostro team ispeziona l'auto in Paraguay. Ricevi report fotografico e video dettagliato.
+          </p>
+        </div>
+
+        <div class="process__step reveal reveal-delay-4">
+          <div class="process__step-number">4</div>
+          <span class="process__step-icon">🚢</span>
+          <h3 class="process__step-title">Spedizione & Dogana</h3>
+          <p class="process__step-desc">
+            Gestiamo il trasporto via container, lo sdoganamento e tutte le pratiche burocratiche.
+          </p>
+        </div>
+
+        <div class="process__step reveal reveal-delay-5">
+          <div class="process__step-number">5</div>
+          <span class="process__step-icon">🏠</span>
+          <h3 class="process__step-title">Consegna a Domicilio</h3>
+          <p class="process__step-desc">
+            La tua auto arriva direttamente a casa tua, pronta per essere immatricolata e guidata.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== Footer / Contact ===== -->
+  <footer class="footer" id="contatti">
+    <div class="container">
+      <div class="footer__grid">
+
+        <!-- Brand Column -->
+        <div class="footer__brand">
+          <a href="#" class="navbar__logo">
+            <div class="navbar__logo-icon">🏎️</div>
+            <div class="navbar__logo-text">
+              SudAmerica <span>Auto Elite</span>
+            </div>
+          </a>
+          <p class="footer__brand-desc">
+            Auto d'epoca, rally e supercar dal Paraguay verso Italia ed Europa. 
+            Prezzi imbattibili, qualità garantita, trasporto completo.
+          </p>
+          <div class="footer__socials">
+            <a href="#" class="footer__social" aria-label="Instagram">📸</a>
+            <a href="#" class="footer__social" aria-label="WhatsApp">💬</a>
+            <a href="#" class="footer__social" aria-label="Facebook">👤</a>
+            <a href="#" class="footer__social" aria-label="YouTube">🎬</a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer__column">
+          <h4 class="footer__column-title">Navigazione</h4>
+          <div class="footer__links">
+            <a href="#catalogo" class="footer__link">Catalogo Auto</a>
+            <a href="#chi-siamo" class="footer__link">Chi Siamo</a>
+            <a href="#come-funziona" class="footer__link">Come Funziona</a>
+            <a href="#contatti" class="footer__link">Contatti</a>
+          </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer__column">
+          <h4 class="footer__column-title">Contatti</h4>
+          <div class="footer__links">
+            <span class="footer__link">📧 info@sudamericaautoelite.com</span>
+            <span class="footer__link">📱 +595 981 234 567</span>
+            <span class="footer__link">📍 Asunción, Paraguay</span>
+            <span class="footer__link">🕐 Lun-Ven 9:00 - 18:00</span>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="footer__column">
+          <h4 class="footer__column-title">Scrivici</h4>
+          <form class="footer__form" id="contactForm">
+            <input type="text" class="footer__input" placeholder="Il tuo nome" required>
+            <input type="email" class="footer__input" placeholder="La tua email" required>
+            <textarea class="footer__textarea" placeholder="Il tuo messaggio..." rows="3" required></textarea>
+            <button type="submit" class="btn btn--primary" style="width:100%;">Invia Messaggio</button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">
+          © 2024 SudAmerica Auto Elite. Tutti i diritti riservati.
+        </p>
+        <div class="footer__legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Termini di Servizio</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ===== Car Detail Modal ===== -->
+  <div class="modal-overlay" id="carModal">
+    <div class="modal">
+      <button class="modal__close" onclick="closeModalGlobal()" aria-label="Chiudi">✕</button>
+
+      <div class="modal__image">
+        <img src="" alt="Dettaglio auto" loading="lazy">
+      </div>
+
+      <div class="modal__body">
+        <span class="modal__badge"></span>
+        <h2 class="modal__title"></h2>
+        <p class="modal__year"></p>
+        <p class="modal__description"></p>
+
+        <div class="modal__specs">
+          <div class="modal__spec">
+            <div class="modal__spec-label">Motore</div>
+            <div class="modal__spec-value">-</div>
+          </div>
+          <div class="modal__spec">
+            <div class="modal__spec-label">Potenza</div>
+            <div class="modal__spec-value">-</div>
+          </div>
+          <div class="modal__spec">
+            <div class="modal__spec-label">Chilometraggio</div>
+            <div class="modal__spec-value">-</div>
+          </div>
+          <div class="modal__spec">
+            <div class="modal__spec-label">Trasmissione</div>
+            <div class="modal__spec-value">-</div>
+          </div>
+        </div>
+
+        <div class="modal__price"></div>
+
+        <div class="modal__actions">
+          <a href="#contatti" class="btn btn--primary" onclick="closeModalGlobal()">
+            ✉ Richiedi Informazioni
+          </a>
+          <button class="btn btn--secondary" onclick="closeModalGlobal()">
+            ← Torna al Catalogo
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
