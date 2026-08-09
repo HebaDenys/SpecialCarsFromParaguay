@@ -177,8 +177,8 @@ function initModal() {
     const modalBadge = modal.querySelector('.modal__badge');
     const modalTitle = modal.querySelector('.modal__title');
     const modalYear = modal.querySelector('.modal__year');
-    const modalDesc = modal.querySelector('.modal__description');
     const modalPrice = modal.querySelector('.modal__price');
+    const modalWhatsappBtn = modal.querySelector('#modalWhatsappBtn');
 
     if (modalImage) modalImage.src = imgSrc;
     if (modalBadge) {
@@ -189,6 +189,11 @@ function initModal() {
     if (modalYear) modalYear.textContent = `Anno: ${data.year || ''}`;
     if (modalDesc) modalDesc.textContent = data.description || '';
     if (modalPrice) modalPrice.textContent = data.price || '';
+
+    if (modalWhatsappBtn) {
+      const carText = `Ciao! Sono interessato a: ${data.name || ''} (${data.year || ''}) - ${data.price || ''}. Vorrei maggiori informazioni.`;
+      modalWhatsappBtn.href = `https://wa.me/595971774994?text=${encodeURIComponent(carText)}`;
+    }
 
     /* Populate specs */
     const specs = modal.querySelectorAll('.modal__spec-value');
