@@ -3,25 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="SudAmerica Auto Elite — Auto d'epoca, rally e supercar dal Paraguay a prezzi imbattibili. Spedizione in tutta Italia ed Europa con garanzia di qualità.">
-  <meta name="keywords" content="auto d'epoca, auto classiche, rally car, supercar, Paraguay, importazione auto, auto storiche, classic cars">
+  <meta name="description" content="SudAmerica Auto Elite — Vendita auto d'epoca, rally e supercar dal Paraguay verso Italia ed Europa. Ispezione certificata 120 punti, logistica marittima completa e immatricolazione ASI/CRS.">
+  <meta name="keywords" content="auto d'epoca, auto classiche, rally car, supercar, Paraguay, importazione auto, auto storiche, classic cars, ASI, CRS, Lancia Delta, Ferrari, Porsche 911">
   <meta name="author" content="SudAmerica Auto Elite">
   <meta name="robots" content="index, follow">
 
   <!-- Open Graph -->
   <meta property="og:title" content="SudAmerica Auto Elite — Auto Esclusive dal Paraguay">
-  <meta property="og:description" content="Trova l'auto dei tuoi sogni dal cuore del Sudamerica. Classiche, rally e supercar a prezzi imbattibili.">
+  <meta property="og:description" content="Trova l'auto dei tuoi sogni dal cuore del Sudamerica. Classiche, rally e supercar a prezzi fino al 40% inferiori con ispezione certificata 120 punti.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hebadenys.github.io/SpecialCarsFromParaguay/">
 
   <title>SudAmerica Auto Elite — Auto d'Epoca, Rally e Supercar dal Paraguay</title>
 
   <!-- Favicon (inline SVG as data URI) -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏎️</text></svg>">
 
+  <!-- Schema.org JSON-LD Structured Data for Google SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoDealer",
+    "name": "SudAmerica Auto Elite",
+    "image": "https://hebadenys.github.io/SpecialCarsFromParaguay/img/hero/hero_background.png",
+    "url": "https://hebadenys.github.io/SpecialCarsFromParaguay/",
+    "telephone": "+595971774994",
+    "priceRange": "€€€€",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Asunción",
+      "addressCountry": "PY"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -25.2637,
+      "longitude": -57.5759
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    "currenciesAccepted": "EUR, USD",
+    "paymentAccepted": "Bonifico Bancario, Escrow Deposito a Garanzia",
+    "description": "Vendita e intermediazione auto d'epoca, rally e supercar dal Paraguay verso l'Europa con ispezione certificata, logistica e pratiche ASI/CRS."
+  }
+  </script>
+
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <!-- Ambient Glow Follower -->
+  <div class="ambient-glow" id="ambientGlow"></div>
 
   <!-- ===== Page Loader ===== -->
   <div class="page-loader" id="pageLoader">
@@ -41,11 +83,13 @@
 
       <div class="navbar__links" id="navLinks">
         <a href="#catalogo" class="navbar__link">Catalogo</a>
+        <a href="#calcolatore" class="navbar__link">Calcolatore</a>
+        <a href="#ispezione" class="navbar__link">Ispezione 120 Punti</a>
         <a href="#chi-siamo" class="navbar__link">Chi Siamo</a>
         <a href="#recensioni" class="navbar__link">Recensioni</a>
-        <a href="#come-funziona" class="navbar__link">Come Funziona</a>
+        <a href="#faq" class="navbar__link">FAQ</a>
         <a href="#contatti" class="navbar__link">Contatti</a>
-        <a href="#contatti" class="btn btn--primary navbar__cta">Richiedi Info</a>
+        <a href="https://wa.me/595971774994?text=Ciao!%20Vorrei%20informazioni%20sulle%20auto%20disponibili." target="_blank" rel="noopener" class="btn btn--primary navbar__cta">💬 Richiedi Info</a>
       </div>
 
       <button class="navbar__toggle" id="navToggle" aria-label="Apri menu">
@@ -59,6 +103,7 @@
 
   <!-- ===== Hero Section ===== -->
   <section class="hero" id="hero">
+    <canvas id="heroCanvas" class="hero__canvas"></canvas>
     <div class="hero__bg">
       <img src="img/hero/hero_background.png" alt="Auto sportiva classica su strada panoramica al tramonto" loading="eager">
     </div>
@@ -71,7 +116,7 @@
 
     <div class="container hero__content">
       <div class="hero__badge">
-        Paraguay → Italia &amp; Europa
+        Paraguay → Italia &amp; Europa · Ispezione 120 Punti
       </div>
 
       <h1 class="hero__title">
@@ -80,23 +125,23 @@
       </h1>
 
       <p class="hero__description">
-        Scopri auto d'epoca, rally e supercar introvabili in Europa — a prezzi fino al 40% inferiori. 
-        Dal Paraguay alla tua porta, con ispezione certificata e logistica completa.
+        Scopri auto d'epoca, rally e supercar introvabili in Europa a prezzi fino al 40% inferiori. 
+        Dal Paraguay alla tua porta, con perizia meccanica certificata, sdoganamento e immatricolazione completa.
       </p>
 
       <div class="hero__actions">
         <a href="#catalogo" class="btn btn--primary">
-          ⬇ Scopri il Catalogo
+          ⬇ Sfoglia il Catalogo
         </a>
-        <a href="#come-funziona" class="btn btn--secondary">
-          ⚙ Come Funziona
+        <a href="#calcolatore" class="btn btn--secondary">
+          🧮 Calcola Risparmio &amp; Spese
         </a>
       </div>
 
       <div class="hero__stats">
         <div class="hero__stat">
           <div class="hero__stat-number" data-count="150" data-suffix="+">0</div>
-          <div class="hero__stat-label">Auto Vendute</div>
+          <div class="hero__stat-label">Auto Consegnate</div>
         </div>
         <div class="hero__stat">
           <div class="hero__stat-number" data-count="12" data-suffix="">0</div>
@@ -107,8 +152,8 @@
           <div class="hero__stat-label">Risparmio Medio</div>
         </div>
         <div class="hero__stat">
-          <div class="hero__stat-number" data-count="8" data-suffix="">0</div>
-          <div class="hero__stat-label">Anni di Esperienza</div>
+          <div class="hero__stat-number" data-count="120" data-suffix=" Punti" data-prefix="">0</div>
+          <div class="hero__stat-label">Protocollo Ispezione</div>
         </div>
       </div>
     </div>
@@ -124,33 +169,33 @@
   <div class="trust-banner">
     <div class="trust-banner__track">
       <div class="trust-banner__content">
-        <span class="trust-banner__item">🏆 Dealer Certificato</span>
+        <span class="trust-banner__item">🏆 Dealer Certificato Paraguay</span>
         <span class="trust-banner__separator">◆</span>
-        <span class="trust-banner__item">🛡️ Garanzia 12 Mesi</span>
+        <span class="trust-banner__item">🛡️ Ispezione Meccanica 120 Punti</span>
         <span class="trust-banner__separator">◆</span>
-        <span class="trust-banner__item">🚢 Spedizione Assicurata</span>
+        <span class="trust-banner__item">🚢 Spedizione Assicurata All-Risk</span>
         <span class="trust-banner__separator">◆</span>
-        <span class="trust-banner__item">📋 Documenti Verificati</span>
+        <span class="trust-banner__item">📋 Documenti e Matching Numbers Verificati</span>
         <span class="trust-banner__separator">◆</span>
-        <span class="trust-banner__item">💳 Pagamento Sicuro</span>
+        <span class="trust-banner__item">💳 Pagamento Sicuro con Deposito Escrow</span>
         <span class="trust-banner__separator">◆</span>
-        <span class="trust-banner__item">🌍 Consegna in Tutta Europa</span>
+        <span class="trust-banner__item">🇮🇹 Assistenza Immatricolazione ASI / CRS</span>
         <span class="trust-banner__separator">◆</span>
-        <span class="trust-banner__item">⭐ 4.9/5 Recensioni Clienti</span>
+        <span class="trust-banner__item">⭐ 4.9/5 Recensioni Clienti Verificate</span>
         <span class="trust-banner__separator">◆</span>
-        <span class="trust-banner__item">🏆 Dealer Certificato</span>
+        <span class="trust-banner__item">🏆 Dealer Certificato Paraguay</span>
         <span class="trust-banner__separator">◆</span>
-        <span class="trust-banner__item">🛡️ Garanzia 12 Mesi</span>
+        <span class="trust-banner__item">🛡️ Ispezione Meccanica 120 Punti</span>
         <span class="trust-banner__separator">◆</span>
-        <span class="trust-banner__item">🚢 Spedizione Assicurata</span>
+        <span class="trust-banner__item">🚢 Spedizione Assicurata All-Risk</span>
         <span class="trust-banner__separator">◆</span>
-        <span class="trust-banner__item">📋 Documenti Verificati</span>
+        <span class="trust-banner__item">📋 Documenti e Matching Numbers Verificati</span>
         <span class="trust-banner__separator">◆</span>
-        <span class="trust-banner__item">💳 Pagamento Sicuro</span>
+        <span class="trust-banner__item">💳 Pagamento Sicuro con Deposito Escrow</span>
         <span class="trust-banner__separator">◆</span>
-        <span class="trust-banner__item">🌍 Consegna in Tutta Europa</span>
+        <span class="trust-banner__item">🇮🇹 Assistenza Immatricolazione ASI / CRS</span>
         <span class="trust-banner__separator">◆</span>
-        <span class="trust-banner__item">⭐ 4.9/5 Recensioni Clienti</span>
+        <span class="trust-banner__item">⭐ 4.9/5 Recensioni Clienti Verificate</span>
         <span class="trust-banner__separator">◆</span>
       </div>
     </div>
@@ -162,45 +207,77 @@
     <div class="bg-grid"></div>
     <div class="container">
       <div class="section__header reveal">
-        <span class="section__label">Il Nostro Catalogo</span>
+        <span class="section__label">Showroom Digitale</span>
         <h2 class="section__title">Trova la Tua <span class="text-gradient">Auto dei Sogni</span></h2>
         <p class="section__subtitle">
-          Una selezione curata di auto d'epoca, rally e supercar disponibili in Paraguay, 
-          pronte per essere spedite direttamente a casa tua.
+          Una selezione esclusiva di auto d'epoca, leggende del rally e supercar disponibili subito in Paraguay, 
+          con perizia tecnica certificata e trasporto marittimo garantito.
         </p>
       </div>
 
-      <!-- Filters -->
-      <div class="catalog__filters reveal">
-        <button class="catalog__filter active" data-filter="all">Tutte</button>
-        <button class="catalog__filter" data-filter="classica">🏛️ Classiche</button>
-        <button class="catalog__filter" data-filter="rally">🏁 Rally</button>
-        <button class="catalog__filter" data-filter="supercar">⚡ Supercar</button>
-        <button class="catalog__filter" data-filter="suv">🌍 SUV Premium</button>
+      <!-- Advanced Controls: Search & Sort -->
+      <div class="catalog__controls reveal">
+        <div class="catalog__search-bar">
+          <div class="catalog__search-input-wrap">
+            <span class="catalog__search-icon">🔍</span>
+            <input type="text" id="catalogSearch" class="catalog__search-input" placeholder="Cerca per modello, motore, anno (es. Delta, V8, 1972, Turbo)...">
+          </div>
+
+          <div class="catalog__sort-wrap">
+            <label for="catalogSort" class="catalog__sort-label">Ordina:</label>
+            <select id="catalogSort" class="catalog__sort-select">
+              <option value="featured">In Evidenza</option>
+              <option value="price-asc">Prezzo: dal più basso</option>
+              <option value="price-desc">Prezzo: dal più alto</option>
+              <option value="year-desc">Anno: più recente</option>
+              <option value="year-asc">Anno: più storico</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Filters with dynamic counters -->
+        <div class="catalog__filters">
+          <button class="catalog__filter active" data-filter="all">Tutte <span class="catalog__filter-count" data-count-for="all">10</span></button>
+          <button class="catalog__filter" data-filter="classica">🏛️ Classiche <span class="catalog__filter-count" data-count-for="classica">3</span></button>
+          <button class="catalog__filter" data-filter="rally">🏁 Rally <span class="catalog__filter-count" data-count-for="rally">4</span></button>
+          <button class="catalog__filter" data-filter="supercar">⚡ Supercar <span class="catalog__filter-count" data-count-for="supercar">2</span></button>
+          <button class="catalog__filter" data-filter="suv">🌍 SUV Premium <span class="catalog__filter-count" data-count-for="suv">1</span></button>
+        </div>
+
+        <div class="catalog__results-bar">
+          <span id="catalogResultsCount">Mostrando 10 auto disponibili</span>
+          <span>Valuta: EUR (€) · Spedizione Italia/Europa inclusa nelle stime</span>
+        </div>
       </div>
 
       <!-- Car Grid -->
-      <div class="catalog__grid">
+      <div class="catalog__grid" id="catalogGrid">
 
         <!-- Car 1: Alfa Romeo Spider -->
         <div class="car-card reveal reveal-delay-1"
              data-category="classica"
              data-name="Alfa Romeo Spider 2000"
              data-year="1972"
+             data-raw-year="1972"
              data-price="€28.500"
-             data-description="Un'icona del design italiano: la Spider 2000 incarna la dolce vita su quattro ruote. Carrozzeria Pininfarina, motore bialbero 2.0L che canta fino a 6000 giri. Restauro completo con verniciatura originale Rosso Alfa. Interni in pelle nera, capote funzionante. Un investimento sicuro per collezionisti esigenti."
+             data-raw-price="28500"
+             data-eu-price="42000"
+             data-status="available"
+             data-match="matching-numbers"
+             data-description="Un'icona del design italiano: la Spider 2000 incarna la dolce vita su quattro ruote. Carrozzeria Pininfarina, motore bialbero 2.0L che canta fino a 6000 giri. Restauro conservativo completo con verniciatura originale Rosso Alfa. Interni in pelle nera, capote originale impeccabile. Certificata esente ruggine passante."
              data-engine="2.0L 4 cilindri bialbero"
              data-power="131 CV"
              data-km="67.000 km"
              data-transmission="Manuale 5 marce">
           <div class="car-card__image">
             <span class="car-card__badge car-card__badge--classica">Classica</span>
+            <span class="car-card__status car-card__status--available">Disponibile</span>
             <img src="img/cars/alfa_romeo_spider.png" alt="Alfa Romeo Spider 2000 rossa del 1972" loading="lazy">
             <div class="car-card__overlay"></div>
           </div>
           <div class="car-card__body">
             <h3 class="car-card__name">Alfa Romeo Spider 2000</h3>
-            <p class="car-card__year">1972 · Classica</p>
+            <p class="car-card__year">1972 · Classica · Motore 2.0L Bialbero</p>
             <div class="car-card__footer">
               <span class="car-card__price">€28.500</span>
               <span class="car-card__action">→</span>
@@ -213,20 +290,26 @@
              data-category="rally"
              data-name="Lancia Delta HF Integrale"
              data-year="1991"
+             data-raw-year="1991"
              data-price="€45.000"
-             data-description="La regina del rally mondiale: 6 titoli mondiali costruttori consecutivi dal 1987 al 1992. Questo esemplare del '91 presenta il motore 2.0 turbo 16V con 215 CV, trazione integrale permanente e differenziale Torsen. Livrea bianca Martini Racing non originale ma fedelmente riprodotta. Manutenzione maniacale con tutta la documentazione."
+             data-raw-price="45000"
+             data-eu-price="68000"
+             data-status="ready"
+             data-match="matching-numbers"
+             data-description="La regina del rally mondiale: 6 titoli mondiali costruttori consecutivi. Questo esemplare del '91 presenta il motore 2.0 turbo 16V con 215 CV, trazione integrale permanente e differenziale Torsen. Livrea bianca Martini Racing fedelmente applicata. Manutenzione documentata con test di compressione cilindri perfetto."
              data-engine="2.0L Turbo 16V"
              data-power="215 CV"
              data-km="89.000 km"
              data-transmission="Manuale 5 marce">
           <div class="car-card__image">
             <span class="car-card__badge car-card__badge--rally">Rally</span>
+            <span class="car-card__status car-card__status--ready">Pronta Spedizione</span>
             <img src="img/cars/lancia_delta.png" alt="Lancia Delta HF Integrale bianca del 1991" loading="lazy">
             <div class="car-card__overlay"></div>
           </div>
           <div class="car-card__body">
             <h3 class="car-card__name">Lancia Delta HF Integrale</h3>
-            <p class="car-card__year">1991 · Rally</p>
+            <p class="car-card__year">1991 · Rally · Turbo 16V 4WD</p>
             <div class="car-card__footer">
               <span class="car-card__price">€45.000</span>
               <span class="car-card__action">→</span>
@@ -239,20 +322,26 @@
              data-category="supercar"
              data-name="Porsche 911 Carrera (964)"
              data-year="1990"
+             data-raw-year="1990"
              data-price="€62.000"
-             data-description="La 964 è considerata l'ultima vera 911 classica con le sue forme iconiche ma con l'aggiunta della trazione integrale e dell'ABS. Motore flat-six 3.6L raffreddato ad aria da 250 CV. Colore Argento Metallizzato con interni in pelle bordeaux. Revisione completa del motore a 95.000 km. Un classico che non smetterà mai di apprezzarsi."
-             data-engine="3.6L Flat-Six"
+             data-raw-price="62000"
+             data-eu-price="89000"
+             data-status="negotiating"
+             data-match="matching-numbers"
+             data-description="L'ultima vera 911 raffreddata ad aria con carrozzeria classica iconica. Motore flat-six 3.6L da 250 CV con cambio manuale G50. Colore Argento Metallizzato con interni in pelle bordeaux. Nessun trafilamento olio, tagliando completo recente. Matching numbers certificato Porsche."
+             data-engine="3.6L Flat-Six Aircooled"
              data-power="250 CV"
              data-km="112.000 km"
              data-transmission="Manuale 5 marce (G50)">
           <div class="car-card__image">
             <span class="car-card__badge car-card__badge--supercar">Supercar</span>
+            <span class="car-card__status car-card__status--negotiating">In Trattativa</span>
             <img src="img/cars/porsche_911.png" alt="Porsche 911 Carrera 964 argento del 1990" loading="lazy">
             <div class="car-card__overlay"></div>
           </div>
           <div class="car-card__body">
             <h3 class="car-card__name">Porsche 911 Carrera (964)</h3>
-            <p class="car-card__year">1990 · Supercar</p>
+            <p class="car-card__year">1990 · Supercar · Flat-Six 3.6L</p>
             <div class="car-card__footer">
               <span class="car-card__price">€62.000</span>
               <span class="car-card__action">→</span>
@@ -265,20 +354,26 @@
              data-category="classica"
              data-name="Fiat 124 Sport Spider"
              data-year="1975"
+             data-raw-year="1975"
              data-price="€19.800"
-             data-description="La piccola spider italiana che ha conquistato il mondo: design Pininfarina su meccanica Fiat affidabile. Motore 1.8L twin-cam con doppio Weber, capote manuale in ottimo stato. Colore Blu Chiaro Metallizzato originale. Perfetta per chi vuole entrare nel mondo delle classiche senza spendere una fortuna."
+             data-raw-price="19800"
+             data-eu-price="29500"
+             data-status="available"
+             data-match="matching-numbers"
+             data-description="Disegnata da Pininfarina con meccanica twin-cam scattante e affidabile. Motore 1.8L con doppio corpo Weber, capote manuale perfetta, colore Blu Chiaro Metallizzato. Fondo vettura sano e conservato. Un classico italiano pronto all'uso con costi di gestione minimi."
              data-engine="1.8L Twin-Cam"
              data-power="118 CV"
              data-km="54.000 km"
              data-transmission="Manuale 5 marce">
           <div class="car-card__image">
             <span class="car-card__badge car-card__badge--classica">Classica</span>
+            <span class="car-card__status car-card__status--available">Disponibile</span>
             <img src="img/cars/fiat_124_spider.png" alt="Fiat 124 Sport Spider blu del 1975" loading="lazy">
             <div class="car-card__overlay"></div>
           </div>
           <div class="car-card__body">
             <h3 class="car-card__name">Fiat 124 Sport Spider</h3>
-            <p class="car-card__year">1975 · Classica</p>
+            <p class="car-card__year">1975 · Classica · Pininfarina</p>
             <div class="car-card__footer">
               <span class="car-card__price">€19.800</span>
               <span class="car-card__action">→</span>
@@ -291,20 +386,26 @@
              data-category="rally"
              data-name="Ford Escort RS Cosworth"
              data-year="1994"
+             data-raw-year="1994"
              data-price="€38.000"
-             data-description="L'ultima vera Escort da rally omologata per la strada. Motore Cosworth YBT 2.0 turbo da 227 CV, trazione integrale permanente, e quell'inconfondibile alettone posteriore a doppio piano. Bianca con strisce blu racing. Solo 7.145 esemplari prodotti — un instant classic che sta salendo di valore vertiginosamente."
+             data-raw-price="38000"
+             data-eu-price="58000"
+             data-status="available"
+             data-match="matching-numbers"
+             data-description="L'icona del gruppo A stradale con alettone posteriore a doppio piano. Motore Cosworth YBT 2.0 turbo da 227 CV e trazione integrale permanente 34/66. Bianca con livrea racing impeccabile. Esemplare da collezione con valore di mercato in forte ascesa."
              data-engine="2.0L Cosworth YBT Turbo"
              data-power="227 CV"
              data-km="72.000 km"
              data-transmission="Manuale 5 marce (MT75)">
           <div class="car-card__image">
             <span class="car-card__badge car-card__badge--rally">Rally</span>
+            <span class="car-card__status car-card__status--available">Disponibile</span>
             <img src="img/cars/ford_escort_rs.png" alt="Ford Escort RS Cosworth bianca del 1994" loading="lazy">
             <div class="car-card__overlay"></div>
           </div>
           <div class="car-card__body">
             <h3 class="car-card__name">Ford Escort RS Cosworth</h3>
-            <p class="car-card__year">1994 · Rally</p>
+            <p class="car-card__year">1994 · Rally · Cosworth 4WD</p>
             <div class="car-card__footer">
               <span class="car-card__price">€38.000</span>
               <span class="car-card__action">→</span>
@@ -317,20 +418,26 @@
              data-category="classica"
              data-name="Mercedes-Benz 280 SL Pagoda"
              data-year="1969"
+             data-raw-year="1969"
              data-price="€55.000"
-             data-description="La Pagoda è una delle Mercedes più eleganti mai prodotte: il tetto a pagoda concavo la rende immediatamente riconoscibile. Motore 2.8L 6 cilindri in linea a iniezione meccanica, cambio automatico a 4 rapporti. Color crema con interni in pelle cognac. Restauro conservativo di alta qualità. Un gioiello di ingegneria tedesca."
+             data-raw-price="55000"
+             data-eu-price="85000"
+             data-status="ready"
+             data-match="matching-numbers"
+             data-description="L'eleganza senza tempo della serie W113. Motore 2.8L 6 cilindri a iniezione meccanica Bosch, hardtop originale e capote morbida. Tonalità Crema con interni in pelle cognac conservati. Meccanica revisionata e pronta per raduni d'eleganza."
              data-engine="2.8L 6 cilindri in linea"
              data-power="170 CV"
              data-km="128.000 km"
              data-transmission="Automatico 4 marce">
           <div class="car-card__image">
             <span class="car-card__badge car-card__badge--classica">Classica</span>
+            <span class="car-card__status car-card__status--ready">Pronta Spedizione</span>
             <img src="img/cars/mercedes_pagoda.png" alt="Mercedes-Benz 280 SL Pagoda crema del 1969" loading="lazy">
             <div class="car-card__overlay"></div>
           </div>
           <div class="car-card__body">
             <h3 class="car-card__name">Mercedes-Benz 280 SL Pagoda</h3>
-            <p class="car-card__year">1969 · Classica</p>
+            <p class="car-card__year">1969 · Classica · Hardtop W113</p>
             <div class="car-card__footer">
               <span class="car-card__price">€55.000</span>
               <span class="car-card__action">→</span>
@@ -343,20 +450,26 @@
              data-category="suv"
              data-name="Toyota Land Cruiser FJ40"
              data-year="1978"
+             data-raw-year="1978"
              data-price="€35.500"
-             data-description="Il FJ40 è il fuoristrada per eccellenza: nato per la giungla e le miniere, oggi è l'oggetto del desiderio di collezionisti in tutto il mondo. Motore 2F 4.2L a benzina, ridotte basse, ponti rigidi con bloccaggi. Colore Verde Oliva militare con soft-top rimovibile. Meccanicamente impeccabile, pronto per qualsiasi avventura."
+             data-raw-price="35500"
+             data-eu-price="52000"
+             data-status="available"
+             data-match="matching-numbers"
+             data-description="Il re indistruttibile dell'off-road storico. Motore 2F 4.2L a 6 cilindri benzina con ridotte e ponti rigidi originali. Verde Oliva militare con soft-top rimovibile. Telaio e scocca privi di ruggine passante, meccanica robusta revisionata."
              data-engine="4.2L 6 cilindri (2F)"
              data-power="135 CV"
              data-km="145.000 km"
              data-transmission="Manuale 4 marce + ridotte">
           <div class="car-card__image">
             <span class="car-card__badge car-card__badge--suv">SUV Premium</span>
+            <span class="car-card__status car-card__status--available">Disponibile</span>
             <img src="img/cars/toyota_fj40.png" alt="Toyota Land Cruiser FJ40 verde oliva del 1978" loading="lazy">
             <div class="car-card__overlay"></div>
           </div>
           <div class="car-card__body">
             <h3 class="car-card__name">Toyota Land Cruiser FJ40</h3>
-            <p class="car-card__year">1978 · SUV Premium</p>
+            <p class="car-card__year">1978 · SUV Premium · 4x4 Ridotte</p>
             <div class="car-card__footer">
               <span class="car-card__price">€35.500</span>
               <span class="car-card__action">→</span>
@@ -369,20 +482,26 @@
              data-category="rally"
              data-name="Subaru Impreza WRX STI"
              data-year="1998"
+             data-raw-year="1998"
              data-price="€22.000"
-             data-description="La GC8 è la Impreza che ha fatto la storia con Colin McRae e Richard Burns. Motore boxer EJ20 turbo da 280 CV (dichiarati — in realtà di più), trazione integrale DCCD, e quel rombo inconfondibile dello scarico bialbero. Blu World Rally con cerchi dorati OZ Racing originali. Manutenzione certificata Subaru."
+             data-raw-price="22000"
+             data-eu-price="34000"
+             data-status="available"
+             data-match="matching-numbers"
+             data-description="La leggendaria generazione GC8 resa celebre nel WRC. Motore boxer EJ20 turbo da 280 CV con trazione integrale simmetrica e differenziale centrale regolabile. Blu World Rally con cerchi oro OZ Racing originali. Meccanica esuberante e certificata."
              data-engine="2.0L Boxer Turbo (EJ20)"
              data-power="280 CV"
              data-km="96.000 km"
              data-transmission="Manuale 5 marce">
           <div class="car-card__image">
             <span class="car-card__badge car-card__badge--rally">Rally</span>
+            <span class="car-card__status car-card__status--available">Disponibile</span>
             <img src="img/cars/subaru_wrx_sti.png" alt="Subaru Impreza WRX STI blu del 1998" loading="lazy">
             <div class="car-card__overlay"></div>
           </div>
           <div class="car-card__body">
             <h3 class="car-card__name">Subaru Impreza WRX STI</h3>
-            <p class="car-card__year">1998 · Rally</p>
+            <p class="car-card__year">1998 · Rally · Boxer Turbo EJ20</p>
             <div class="car-card__footer">
               <span class="car-card__price">€22.000</span>
               <span class="car-card__action">→</span>
@@ -395,20 +514,26 @@
              data-category="supercar"
              data-name="Ferrari 308 GTB"
              data-year="1980"
+             data-raw-year="1980"
              data-price="€78.000"
-             data-description="La 308 GTB è la Ferrari accessibile che ha definito un'era — resa immortale da Magnum P.I. Design Pininfarina con carrozzeria in vetroresina (i primi esemplari) e motore V8 3.0L trasversale. Rosso Corsa con interni Tan. Distribuzione rifatta, freni revisionati. Il biglietto d'ingresso più elegante nel mondo Ferrari."
-             data-engine="3.0L V8"
+             data-raw-price="78000"
+             data-eu-price="115000"
+             data-status="negotiating"
+             data-match="matching-numbers"
+             data-description="L'icona di Maranello con design Pininfarina e motore V8 3.0L a carter secco con 4 carburatori Weber. Rosso Corsa con interni in pelle tabacco. Cinghie di distribuzione appena sostituite, impianto frenante revisionato. Certificato di autenticità."
+             data-engine="3.0L V8 Carburatori"
              data-power="255 CV"
              data-km="78.000 km"
              data-transmission="Manuale 5 marce">
           <div class="car-card__image">
             <span class="car-card__badge car-card__badge--supercar">Supercar</span>
+            <span class="car-card__status car-card__status--negotiating">In Trattativa</span>
             <img src="img/cars/ferrari_308.png" alt="Ferrari 308 GTB rossa del 1980" loading="lazy">
             <div class="car-card__overlay"></div>
           </div>
           <div class="car-card__body">
             <h3 class="car-card__name">Ferrari 308 GTB</h3>
-            <p class="car-card__year">1980 · Supercar</p>
+            <p class="car-card__year">1980 · Supercar · V8 Maranello</p>
             <div class="car-card__footer">
               <span class="car-card__price">€78.000</span>
               <span class="car-card__action">→</span>
@@ -421,20 +546,26 @@
              data-category="rally"
              data-name="Lancia Stratos (Replica)"
              data-year="1985"
+             data-raw-year="1985"
              data-price="€52.000"
-             data-description="Replica artigianale della leggendaria Stratos, costruita su telaio tubolare con meccanica Ferrari Dino V6 2.4L. Design fedele all'originale di Marcello Gandini con carrozzeria in vetroresina. Solo 492 Stratos originali furono prodotte — questa replica è tra le più fedeli in circolazione. Livrea Marlboro/Alitalia bianca e rossa."
+             data-raw-price="52000"
+             data-eu-price="79000"
+             data-status="ready"
+             data-match="custom-build"
+             data-description="Costruzione artigianale ad altissima fedeltà su telaio tubolare specifico con motore Ferrari Dino V6 2.4L centrale. Carrozzeria in vetroresina alleggerita con livrea Alitalia storica. Sound inconfondibile ed emozioni pure da prova speciale."
              data-engine="2.4L Ferrari Dino V6"
              data-power="190 CV"
              data-km="23.000 km"
              data-transmission="Manuale 5 marce">
           <div class="car-card__image">
             <span class="car-card__badge car-card__badge--rally">Rally</span>
+            <span class="car-card__status car-card__status--ready">Pronta Spedizione</span>
             <img src="img/cars/lancia_stratos.png" alt="Lancia Stratos replica rossa e bianca del 1985" loading="lazy">
             <div class="car-card__overlay"></div>
           </div>
           <div class="car-card__body">
             <h3 class="car-card__name">Lancia Stratos (Replica)</h3>
-            <p class="car-card__year">1985 · Rally</p>
+            <p class="car-card__year">1985 · Rally · Dino V6 2.4L</p>
             <div class="car-card__footer">
               <span class="car-card__price">€52.000</span>
               <span class="car-card__action">→</span>
@@ -442,7 +573,278 @@
           </div>
         </div>
 
+        <!-- Empty State -->
+        <div class="catalog__empty" id="catalogEmpty">
+          <div class="catalog__empty-icon">🏎️💨</div>
+          <h3 class="catalog__empty-title">Nessun veicolo trovato</h3>
+          <p class="catalog__empty-desc">Nessuna auto corrisponde ai criteri di ricerca selezionati.</p>
+          <button class="btn btn--secondary" id="resetFiltersBtn">Reimposta Tutti i Filtri</button>
+        </div>
+
       </div><!-- /catalog__grid -->
+    </div>
+  </section>
+
+
+  <!-- ===== Interactive Savings & Cost Calculator Section ===== -->
+  <section class="section calculator" id="calcolatore">
+    <div class="bg-grid"></div>
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">Trasparenza Totale</span>
+        <h2 class="section__title">Calcolatore <span class="text-gradient">Risparmio &amp; Spese</span></h2>
+        <p class="section__subtitle">
+          Scopri esattamente quanto risparmi acquistando in Paraguay rispetto alle quotazioni medie in Europa, 
+          con tutti i costi di spedizione, dogana e immatricolazione calcolati in tempo reale.
+        </p>
+      </div>
+
+      <div class="calculator__grid">
+        <!-- Form Controls -->
+        <div class="calculator__form-box reveal">
+          <h3 class="calculator__form-title">⚙️ Configura il Tuo Preventivo</h3>
+
+          <div class="calculator__field">
+            <label class="calculator__label" for="calcCarSelect">Seleziona Veicolo dal Catalogo:</label>
+            <select id="calcCarSelect" class="calculator__select">
+              <option value="custom">✏️ Inserisci Valore Personalizzato</option>
+              <option value="alfa_spider" data-price="28500" data-eu="42000" data-name="Alfa Romeo Spider 2000 (1972)" selected>Alfa Romeo Spider 2000 (€28.500)</option>
+              <option value="lancia_delta" data-price="45000" data-eu="68000" data-name="Lancia Delta HF Integrale (1991)">Lancia Delta HF Integrale (€45.000)</option>
+              <option value="porsche_964" data-price="62000" data-eu="89000" data-name="Porsche 911 Carrera 964 (1990)">Porsche 911 Carrera (964) (€62.000)</option>
+              <option value="fiat_124" data-price="19800" data-eu="29500" data-name="Fiat 124 Sport Spider (1975)">Fiat 124 Sport Spider (€19.800)</option>
+              <option value="ford_escort" data-price="38000" data-eu="58000" data-name="Ford Escort RS Cosworth (1994)">Ford Escort RS Cosworth (€38.000)</option>
+              <option value="mercedes_pagoda" data-price="55000" data-eu="85000" data-name="Mercedes-Benz 280 SL Pagoda (1969)">Mercedes-Benz 280 SL Pagoda (€55.000)</option>
+              <option value="toyota_fj40" data-price="35500" data-eu="52000" data-name="Toyota Land Cruiser FJ40 (1978)">Toyota Land Cruiser FJ40 (€35.500)</option>
+              <option value="subaru_wrx" data-price="22000" data-eu="34000" data-name="Subaru Impreza WRX STI (1998)">Subaru Impreza WRX STI (€22.000)</option>
+              <option value="ferrari_308" data-price="78000" data-eu="115000" data-name="Ferrari 308 GTB (1980)">Ferrari 308 GTB (€78.000)</option>
+              <option value="lancia_stratos" data-price="52000" data-eu="79000" data-name="Lancia Stratos Replica (1985)">Lancia Stratos Replica (€52.000)</option>
+            </select>
+          </div>
+
+          <div class="calculator__field" id="calcCustomPriceWrap" style="display: none;">
+            <label class="calculator__label" for="calcCustomPrice">Prezzo Auto in Paraguay (€ EUR):</label>
+            <input type="number" id="calcCustomPrice" class="calculator__input" value="30000" min="5000" step="1000">
+          </div>
+
+          <div class="calculator__field">
+            <label class="calculator__label" for="calcCountry">Paese di Destinazione:</label>
+            <select id="calcCountry" class="calculator__select">
+              <option value="IT" selected>🇮🇹 Italia (Genova / Livorno)</option>
+              <option value="DE">🇩🇪 Germania (Bremerhaven / Amburgo)</option>
+              <option value="FR">🇫🇷 Francia (Marsiglia / Le Havre)</option>
+              <option value="ES">🇪🇸 Spagna (Barcellona / Valencia)</option>
+              <option value="CH">🇨🇭 Svizzera (Transito Doganale)</option>
+            </select>
+          </div>
+
+          <div class="calculator__field">
+            <label class="calculator__label">Opzioni di Spedizione &amp; Servizi Aggiuntivi:</label>
+            <div class="calculator__options-grid">
+              <label class="calculator__checkbox-card">
+                <input type="checkbox" id="calcOptInsurance" checked>
+                <span>🛡️ Assicurazione All-Risk (+€650)</span>
+              </label>
+              <label class="calculator__checkbox-card">
+                <input type="checkbox" id="calcOptAsi" checked>
+                <span>🇮🇹 Pratiche ASI / CRS (+€850)</span>
+              </label>
+              <label class="calculator__checkbox-card">
+                <input type="checkbox" id="calcOptHomeDelivery" checked>
+                <span>🚚 Bisarca a Domicilio (+€700)</span>
+              </label>
+              <label class="calculator__checkbox-card">
+                <input type="checkbox" id="calcOptVideoLive" checked>
+                <span>📹 Video Ispezione Live (Inclusa)</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Receipt & Real-time Breakdown -->
+        <div class="calculator__results-box reveal">
+          <div class="calculator__receipt-header">
+            <div class="calculator__car-selected-tag">Preventivo Dinamico Chiavi in Mano</div>
+            <div class="calculator__car-selected-name" id="calcResCarName">Alfa Romeo Spider 2000 (1972)</div>
+          </div>
+
+          <div class="calculator__breakdown">
+            <div class="calculator__row">
+              <span>Costo Acquisto Veicolo (Paraguay):</span>
+              <span class="calculator__row-value" id="calcResBase">€28.500</span>
+            </div>
+            <div class="calculator__row">
+              <span>Ispezione 120 Punti &amp; Video Test:</span>
+              <span class="calculator__row-value" style="color: #00e676;">Inclusa (€0)</span>
+            </div>
+            <div class="calculator__row">
+              <span>Spedizione Container Marittimo:</span>
+              <span class="calculator__row-value" id="calcResShipping">€2.600</span>
+            </div>
+            <div class="calculator__row">
+              <span>Sdoganamento &amp; Oneri Doganali:</span>
+              <span class="calculator__row-value" id="calcResCustoms">€3.135</span>
+            </div>
+            <div class="calculator__row">
+              <span>Servizi Selezionati (Assic., ASI, Bisarca):</span>
+              <span class="calculator__row-value" id="calcResOptions">€2.200</span>
+            </div>
+            
+            <div class="calculator__row--divider"></div>
+
+            <div class="calculator__row calculator__row--total">
+              <span>Costo Totale Stimato:</span>
+              <span class="calculator__row-value text-gradient" id="calcResTotal">€36.435</span>
+            </div>
+            <div class="calculator__row" style="font-size: 0.8rem; color: var(--clr-text-muted);">
+              <span>Valore Medio Mercato Europeo:</span>
+              <span id="calcResEuMarket">€42.000</span>
+            </div>
+          </div>
+
+          <!-- Savings Badge -->
+          <div class="calculator__savings-badge">
+            <div>
+              <div class="calculator__savings-label">Risparmio Netto Stimato</div>
+              <div class="calculator__savings-subtext">Rispetto all'acquisto in Europa</div>
+            </div>
+            <div class="calculator__savings-amount" id="calcResSavings">€5.565 (-13%)</div>
+          </div>
+
+          <a href="#" id="calcWhatsappCta" target="_blank" rel="noopener" class="btn btn--primary" style="width: 100%;">
+            💬 Blocca Questo Preventivo su WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== 120-Point Inspection Protocol Section ===== -->
+  <section class="section inspection" id="ispezione">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">Garanzia &amp; Sicurezza</span>
+        <h2 class="section__title">Protocollo di Ispezione <span class="text-gradient">a 120 Punti</span></h2>
+        <p class="section__subtitle">
+          Nessuna sorpresa: prima di ogni transazione, i nostri periti e meccanici specializzati eseguono 
+          un controllo rigoroso su ogni organo del veicolo con report fotografico e video live in alta definizione.
+        </p>
+      </div>
+
+      <div class="inspection__grid">
+        <!-- Pillar 1 -->
+        <div class="inspection__card reveal reveal-delay-1">
+          <div class="inspection__card-header">
+            <div class="inspection__card-icon">⚙️</div>
+            <div>
+              <h3 class="inspection__card-title">Motore &amp; Meccanica</h3>
+              <span class="inspection__card-points">28 Punti di Controllo</span>
+            </div>
+          </div>
+          <ul class="inspection__list">
+            <li class="inspection__item"><span class="inspection__check">✓</span> Test compressione cilindri a banco</li>
+            <li class="inspection__item"><span class="inspection__check">✓</span> Verifica perdite olio, acqua e tenuta guarnizioni</li>
+            <li class="inspection__item"><span class="inspection__check">✓</span> Pressione alimentazione e carburazione</li>
+            <li class="inspection__item"><span class="inspection__check">✓</span> Distribuzione, cinghie e pulegge</li>
+          </ul>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="inspection__card reveal reveal-delay-2">
+          <div class="inspection__card-header">
+            <div class="inspection__card-icon">🛡️</div>
+            <div>
+              <h3 class="inspection__card-title">Telaio &amp; Carrozzeria</h3>
+              <span class="inspection__card-points">24 Punti di Controllo</span>
+            </div>
+          </div>
+          <ul class="inspection__list">
+            <li class="inspection__item"><span class="inspection__check">✓</span> Controllo spessore vernice (misuratore micrometrico)</li>
+            <li class="inspection__item"><span class="inspection__check">✓</span> Certificazione assenza ruggine passante sui fondi</li>
+            <li class="inspection__item"><span class="inspection__check">✓</span> Allineamento longheroni e punti scocca</li>
+            <li class="inspection__item"><span class="inspection__check">✓</span> Ispezione passaruota e sottoporta</li>
+          </ul>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="inspection__card reveal reveal-delay-3">
+          <div class="inspection__card-header">
+            <div class="inspection__card-icon">⚡</div>
+            <div>
+              <h3 class="inspection__card-title">Impianto Elettrico</h3>
+              <span class="inspection__card-points">18 Punti di Controllo</span>
+            </div>
+          </div>
+          <ul class="inspection__list">
+            <li class="inspection__item"><span class="inspection__check">✓</span> Verifica cablaggio storico e scatola fusibili</li>
+            <li class="inspection__item"><span class="inspection__check">✓</span> Strumentazione cruscotto (contagiri, manometri)</li>
+            <li class="inspection__item"><span class="inspection__check">✓</span> Alternatore, motorino di avviamento e batteria</li>
+            <li class="inspection__item"><span class="inspection__check">✓</span> Impianto luci originale e indicatori</li>
+          </ul>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="inspection__card reveal reveal-delay-1">
+          <div class="inspection__card-header">
+            <div class="inspection__card-icon">💺</div>
+            <div>
+              <h3 class="inspection__card-title">Interni &amp; Conservazione</h3>
+              <span class="inspection__card-points">16 Punti di Controllo</span>
+            </div>
+          </div>
+          <ul class="inspection__list">
+            <li class="inspection__item"><span class="inspection__check">✓</span> Autenticità selleria (pelle/tessuto d'epoca)</li>
+            <li class="inspection__item"><span class="inspection__check">✓</span> Condizioni cruscotto, radica e cielo vettura</li>
+            <li class="inspection__item"><span class="inspection__check">✓</span> Meccanismi alzacristalli, cinture e serrature</li>
+            <li class="inspection__item"><span class="inspection__check">✓</span> Tenuta stagna guarnizioni porte e parabrezza</li>
+          </ul>
+        </div>
+
+        <!-- Pillar 5 -->
+        <div class="inspection__card reveal reveal-delay-2">
+          <div class="inspection__card-header">
+            <div class="inspection__card-icon">🛑</div>
+            <div>
+              <h3 class="inspection__card-title">Freni &amp; Sospensioni</h3>
+              <span class="inspection__card-points">20 Punti di Controllo</span>
+            </div>
+          </div>
+          <ul class="inspection__list">
+            <li class="inspection__item"><span class="inspection__check">✓</span> Stato dischi, tamburi, pastiglie e tubazioni</li>
+            <li class="inspection__item"><span class="inspection__check">✓</span> Risposta ammortizzatori e molle di carico</li>
+            <li class="inspection__item"><span class="inspection__check">✓</span> Gioco scatola guida e testine di sterzo</li>
+            <li class="inspection__item"><span class="inspection__check">✓</span> Silent block e boccole barra stabilizzatrice</li>
+          </ul>
+        </div>
+
+        <!-- Pillar 6 -->
+        <div class="inspection__card reveal reveal-delay-3">
+          <div class="inspection__card-header">
+            <div class="inspection__card-icon">📋</div>
+            <div>
+              <h3 class="inspection__card-title">Tracciabilità &amp; Documenti</h3>
+              <span class="inspection__card-points">14 Punti di Controllo</span>
+            </div>
+          </div>
+          <ul class="inspection__list">
+            <li class="inspection__item"><span class="inspection__check">✓</span> Verifica Matching Numbers (telaio / motore)</li>
+            <li class="inspection__item"><span class="inspection__check">✓</span> Storico proprietari e assenza gravami ipotecari</li>
+            <li class="inspection__item"><span class="inspection__check">✓</span> Conformità per certificato CRS / ASI Targa Oro</li>
+            <li class="inspection__item"><span class="inspection__check">✓</span> Documentazione doganale di esportazione autenticata</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Guarantee Banner -->
+      <div class="inspection__guarantee reveal">
+        <div class="inspection__guarantee-text">
+          <h4>🎖️ Garanzia di Conformità Pre-Spedizione</h4>
+          <p>Se durante l'ispezione preliminare il veicolo non rispetta i nostri standard, puoi annullare l'ordine senza alcuna penale.</p>
+        </div>
+        <a href="https://wa.me/595971774994?text=Ciao!%20Vorrei%20vedere%20un%20esempio%20di%20report%20d'ispezione%20120%20punti." target="_blank" rel="noopener" class="btn btn--secondary">
+          📄 Richiedi Report Esempio
+        </a>
+      </div>
     </div>
   </section>
 
@@ -476,29 +878,29 @@
             <div class="about__value">
               <div class="about__value-icon">🔍</div>
               <div>
-                <div class="about__value-title">Ispezione Certificata</div>
-                <div class="about__value-desc">Ogni auto è ispezionata da meccanici specializzati prima dell'acquisto</div>
+                <div class="about__value-title">Ispezione Certificata 120 Punti</div>
+                <div class="about__value-desc">Ogni auto è periziata da meccanici specializzati con video test prima del saldo</div>
               </div>
             </div>
             <div class="about__value">
               <div class="about__value-icon">🚢</div>
               <div>
-                <div class="about__value-title">Logistica Completa</div>
-                <div class="about__value-desc">Trasporto marittimo, sdoganamento e consegna a domicilio inclusi</div>
+                <div class="about__value-title">Logistica Marittima Completa</div>
+                <div class="about__value-desc">Container marittimo sigillato, polizza assicurativa All-Risk e sdoganamento</div>
               </div>
             </div>
             <div class="about__value">
               <div class="about__value-icon">📋</div>
               <div>
-                <div class="about__value-title">Documenti in Regola</div>
-                <div class="about__value-desc">Gestiamo tutte le pratiche di immatricolazione e omologazione</div>
+                <div class="about__value-title">Pratiche ASI / CRS in Regola</div>
+                <div class="about__value-desc">Assistenza totale per immatricolazione storica con targa italiana</div>
               </div>
             </div>
             <div class="about__value">
               <div class="about__value-icon">💰</div>
               <div>
-                <div class="about__value-title">Prezzo Garantito</div>
-                <div class="about__value-desc">Preventivo vincolante senza costi nascosti né sorprese</div>
+                <div class="about__value-title">Prezzo Garantito Chiavi in Mano</div>
+                <div class="about__value-desc">Preventivo vincolante senza costi nascosti né sorprese all'arrivo</div>
               </div>
             </div>
           </div>
@@ -513,10 +915,10 @@
   <section class="section testimonials" id="recensioni">
     <div class="container">
       <div class="section__header reveal">
-        <span class="section__label">Recensioni</span>
+        <span class="section__label">Testimonianze Reali</span>
         <h2 class="section__title">Cosa Dicono i <span class="text-gradient">Nostri Clienti</span></h2>
         <p class="section__subtitle">
-          Oltre 150 auto consegnate con successo. Ecco le esperienze di chi ci ha scelto.
+          Oltre 150 collezionisti soddisfatti in Italia, Germania, Francia e Spagna. Ecco le loro esperienze.
         </p>
       </div>
 
@@ -524,14 +926,14 @@
         <div class="testimonial-card reveal reveal-delay-1">
           <div class="testimonial-card__stars">★★★★★</div>
           <p class="testimonial-card__text">
-            "Ho comprato una Lancia Delta Integrale che in Italia avrebbe costato almeno 20.000€ in più. 
-            Il team mi ha mandato video e foto dettagliate prima dell'acquisto. Auto arrivata in perfette condizioni."
+            "Ho comprato una Lancia Delta Integrale che in Italia avrebbe costato almeno 22.000€ in più. 
+            Il team mi ha mandato la video-ispezione in diretta e il report compressione motore. Auto arrivata al porto di Genova perfetta."
           </p>
           <div class="testimonial-card__author">
             <div class="testimonial-card__avatar">MR</div>
             <div>
               <div class="testimonial-card__name">Marco Rossi</div>
-              <div class="testimonial-card__location">Milano, Italia</div>
+              <div class="testimonial-card__location">Milano, Italia · Lancia Delta HF</div>
             </div>
           </div>
         </div>
@@ -539,14 +941,14 @@
         <div class="testimonial-card reveal reveal-delay-2">
           <div class="testimonial-card__stars">★★★★★</div>
           <p class="testimonial-card__text">
-            "Professionalità impeccabile. Hanno gestito tutto: acquisto, dogana, trasporto e immatricolazione 
-            della mia Porsche 964. Non ho dovuto preoccuparmi di nulla. Consigliatissimi!"
+            "Professionalità impeccabile. Hanno gestito tutto: acquisto ad Asunción, container assicurato, sdoganamento e immatricolazione ASI 
+            della mia Porsche 964. Non ho dovuto fare una sola coda burocratica. Consigliatissimi!"
           </p>
           <div class="testimonial-card__author">
             <div class="testimonial-card__avatar">LB</div>
             <div>
               <div class="testimonial-card__name">Luca Bianchi</div>
-              <div class="testimonial-card__location">Roma, Italia</div>
+              <div class="testimonial-card__location">Roma, Italia · Porsche 911 964</div>
             </div>
           </div>
         </div>
@@ -554,14 +956,14 @@
         <div class="testimonial-card reveal reveal-delay-3">
           <div class="testimonial-card__stars">★★★★★</div>
           <p class="testimonial-card__text">
-            "Ero scettico all'inizio, ma dopo aver visto il report dettagliato dell'ispezione mi sono convinto. 
-            Il mio FJ40 è arrivato a Barcellona in 45 giorni. Risparmio di oltre 10.000€ rispetto al mercato europeo."
+            "Ero scettico all'inizio sull'acquisto oltreoceano, ma dopo il report a 120 punti mi sono fidato. 
+            Il mio Toyota FJ40 è arrivato a Barcellona in 38 giorni esatti. Risparmio di oltre 15.000€ rispetto al mercato spagnolo."
           </p>
           <div class="testimonial-card__author">
             <div class="testimonial-card__avatar">AG</div>
             <div>
               <div class="testimonial-card__name">Antonio García</div>
-              <div class="testimonial-card__location">Barcellona, Spagna</div>
+              <div class="testimonial-card__location">Barcellona, Spagna · Toyota FJ40</div>
             </div>
           </div>
         </div>
@@ -575,10 +977,10 @@
     <div class="bg-grid"></div>
     <div class="container">
       <div class="section__header reveal">
-        <span class="section__label">Il Processo</span>
-        <h2 class="section__title">Come <span class="text-gradient">Funziona</span></h2>
+        <span class="section__label">Procedura Guidata</span>
+        <h2 class="section__title">Come <span class="text-gradient">Funziona l'Acquisto</span></h2>
         <p class="section__subtitle">
-          Dal primo contatto alla consegna a domicilio: un processo semplice, trasparente e senza stress.
+          Dalla selezione alla consegna direttamente nel tuo garage: un percorso trasparente e sicuro al 100%.
         </p>
       </div>
 
@@ -588,44 +990,138 @@
           <span class="process__step-icon">🔎</span>
           <h3 class="process__step-title">Scegli la Tua Auto</h3>
           <p class="process__step-desc">
-            Sfoglia il nostro catalogo o dicci cosa cerchi. Ti proporremo le migliori opzioni disponibili.
+            Sfoglia il catalogo o richiedi una ricerca su misura in tutto il Paraguay per il modello che cerchi.
           </p>
         </div>
 
         <div class="process__step reveal reveal-delay-2">
           <div class="process__step-number">2</div>
           <span class="process__step-icon">💬</span>
-          <h3 class="process__step-title">Preventivo Personalizzato</h3>
+          <h3 class="process__step-title">Preventivo Vincolante</h3>
           <p class="process__step-desc">
-            Ricevi un preventivo completo: prezzo auto, trasporto, dogana e immatricolazione. Tutto incluso.
+            Ricevi il calcolo esatto con sdoganamento, container, assicurazione e immatricolazione senza sorprese.
           </p>
         </div>
 
         <div class="process__step reveal reveal-delay-3">
           <div class="process__step-number">3</div>
           <span class="process__step-icon">🔧</span>
-          <h3 class="process__step-title">Ispezione & Verifica</h3>
+          <h3 class="process__step-title">Perizia a 120 Punti</h3>
           <p class="process__step-desc">
-            Il nostro team ispeziona l'auto in Paraguay. Ricevi report fotografico e video dettagliato.
+            I nostri tecnici ispezionano l'auto e ti inviano dossier fotografico e video test drive in diretta.
           </p>
         </div>
 
         <div class="process__step reveal reveal-delay-4">
           <div class="process__step-number">4</div>
           <span class="process__step-icon">🚢</span>
-          <h3 class="process__step-title">Spedizione & Dogana</h3>
+          <h3 class="process__step-title">Spedizione &amp; Dogana</h3>
           <p class="process__step-desc">
-            Gestiamo il trasporto via container, lo sdoganamento e tutte le pratiche burocratiche.
+            Imbarco in container dedicato con tracciamento satellitare e gestione completa dei dazi all'arrivo.
           </p>
         </div>
 
         <div class="process__step reveal reveal-delay-5">
           <div class="process__step-number">5</div>
           <span class="process__step-icon">🏠</span>
-          <h3 class="process__step-title">Consegna a Domicilio</h3>
+          <h3 class="process__step-title">Consegna a Casa Tua</h3>
           <p class="process__step-desc">
-            La tua auto arriva direttamente a casa tua, pronta per essere immatricolata e guidata.
+            Consegna con bisarca specializzata al tuo indirizzo, pronta per le pratiche ASI e la prima messa su strada.
           </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== Interactive FAQ Section ===== -->
+  <section class="section faq" id="faq">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">Domande &amp; Risposte</span>
+        <h2 class="section__title">Domande <span class="text-gradient">Frequenti (FAQ)</span></h2>
+        <p class="section__subtitle">
+          Tutto ciò che devi sapere sull'importazione, la burocrazia doganale, l'omologazione ASI/CRS e le garanzie.
+        </p>
+      </div>
+
+      <div class="faq__container reveal">
+        <!-- FAQ 1 -->
+        <div class="faq__item">
+          <button class="faq__question-btn" aria-expanded="false">
+            <span>Come funziona lo sdoganamento in Italia e quali sono i dazi per un'auto d'epoca?</span>
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">
+              I veicoli con più di 30 anni di interesse storico beneficiano di un regime doganale agevolato nell'Unione Europea: <strong>Dazio 0% ed IVA ridotta al momento dello sdoganamento</strong> (rispetto al 22% ordinario). Il nostro spedizioniere doganale accreditato gestisce l'intera bolla d'importazione a Genova o Livorno, fornendoti tutta la documentazione vidimata per l'immatricolazione.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq__item">
+          <button class="faq__question-btn" aria-expanded="false">
+            <span>Come viene immatricolata un'auto dal Paraguay in Italia (ASI / CRS)?</span>
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">
+              La procedura è collaudata: con il titolo di proprietà estero autenticato e la bolla doganale, richiediamo il <strong>Certificato di Rilevanza Storica (CRS) presso l'ASI</strong>. Successivamente la Motorizzazione Civile rilascia la carta di circolazione e le targhe italiane storiche o europee. Offriamo assistenza documentale completa per questo passaggio.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq__item">
+          <button class="faq__question-btn" aria-expanded="false">
+            <span>Come posso verificare lo stato reale dell'auto prima di effettuare il pagamento?</span>
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">
+              Prima di qualsiasi versamento definitivo, riceverai il <strong>dossier d'ispezione certificata a 120 punti</strong> con oltre 60 fotografie dettagliate (inclusi sottoscocca, vano motore e punti critici) e un video test drive su strada. Su richiesta, organizziamo una <strong>videochiamata live WhatsApp</strong> direttamente dall'officina per mostrarti ogni dettaglio in tempo reale.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq__item">
+          <button class="faq__question-btn" aria-expanded="false">
+            <span>Quali sono i tempi di spedizione via container marittimo?</span>
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">
+              I tempi medi di navigazione dal porto fluviale di Asunción/Buenos Aires fino ai principali porti europei (Genova, Livorno, Barcellona, Rotterdam) sono di <strong>circa 30-40 giorni</strong>. Riceverai il codice di tracciamento marittimo (Bill of Lading) per monitorare la nave in tempo reale.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq__item">
+          <button class="faq__question-btn" aria-expanded="false">
+            <span>Quali sono le modalità di pagamento e come viene tutelato l'acquirente?</span>
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">
+              I pagamenti avvengono tramite bonifico bancario internazionale tracciato o con <strong>deposito cauzionale escrow</strong>. Il saldo finale del veicolo viene richiesto solo dopo l'esito positivo della perizia meccanica e la convalida dei documenti di esportazione.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq__item">
+          <button class="faq__question-btn" aria-expanded="false">
+            <span>Cosa succede se l'auto subisce danni durante il trasporto marittimo?</span>
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">
+              Tutte le nostre spedizioni viaggiano con <strong>polizza assicurativa marittima All-Risk</strong> stipulata con primarie compagnie internazionali (Lloyd's / Allianz Marine), che copre il 100% del valore del veicolo dal momento del carico nel container fino allo scarico a destinazione.
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -640,13 +1136,13 @@
         Hai Trovato la Tua <span class="text-gradient">Auto dei Sogni?</span>
       </h2>
       <p class="cta-banner__text">
-        Contattaci oggi per un preventivo gratuito e senza impegno. 
-        Il nostro team è pronto ad aiutarti a portare l'auto perfetta direttamente a casa tua.
+        Contattaci oggi per un preventivo personalizzato e gratuito. 
+        Il nostro team in Paraguay è a tua disposizione per trovare qualsiasi vettura e portarla direttamente a casa tua.
       </p>
       <div class="cta-banner__actions">
         <a href="#contatti" class="btn btn--primary">✉ Richiedi Preventivo Gratuito</a>
-        <a href="https://wa.me/595971774994?text=Ciao!%20Vorrei%20un%20preventivo%20per%20un'auto." class="btn btn--secondary" target="_blank" rel="noopener">
-          💬 Chatta su WhatsApp
+        <a href="https://wa.me/595971774994?text=Ciao!%20Vorrei%20un%20preventivo%20per%20un'auto%20dal%20Paraguay." class="btn btn--secondary" target="_blank" rel="noopener">
+          💬 Chatta su WhatsApp (+595 971 774 994)
         </a>
       </div>
     </div>
@@ -668,13 +1164,12 @@
           </a>
           <p class="footer__brand-desc">
             Auto d'epoca, rally e supercar dal Paraguay verso Italia ed Europa. 
-            Prezzi imbattibili, qualità garantita, trasporto completo.
+            Prezzi imbattibili, qualità garantita con ispezione 120 punti e trasporto completo.
           </p>
           <div class="footer__socials">
-            <a href="#" class="footer__social" aria-label="Instagram">📸</a>
             <a href="https://wa.me/595971774994" class="footer__social" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
-            <a href="#" class="footer__social" aria-label="Facebook">👤</a>
-            <a href="#" class="footer__social" aria-label="YouTube">🎬</a>
+            <a href="mailto:info@sudamericaautoelite.com" class="footer__social" aria-label="Email">📧</a>
+            <a href="https://github.com/HebaDenys/SpecialCarsFromParaguay" class="footer__social" target="_blank" rel="noopener" aria-label="GitHub">🐙</a>
           </div>
         </div>
 
@@ -683,32 +1178,34 @@
           <h4 class="footer__column-title">Navigazione</h4>
           <div class="footer__links">
             <a href="#catalogo" class="footer__link">Catalogo Auto</a>
+            <a href="#calcolatore" class="footer__link">Calcolatore Risparmio</a>
+            <a href="#ispezione" class="footer__link">Ispezione 120 Punti</a>
             <a href="#chi-siamo" class="footer__link">Chi Siamo</a>
             <a href="#recensioni" class="footer__link">Recensioni</a>
-            <a href="#come-funziona" class="footer__link">Come Funziona</a>
+            <a href="#faq" class="footer__link">Domande Frequenti (FAQ)</a>
             <a href="#contatti" class="footer__link">Contatti</a>
           </div>
         </div>
 
         <!-- Contact Info -->
         <div class="footer__column">
-          <h4 class="footer__column-title">Contatti</h4>
+          <h4 class="footer__column-title">Contatti Diretti</h4>
           <div class="footer__links">
+            <a href="https://wa.me/595971774994" class="footer__link" target="_blank" rel="noopener">📱 +595 971 774 994 (WhatsApp Diretto)</a>
             <a href="mailto:info@sudamericaautoelite.com" class="footer__link">📧 info@sudamericaautoelite.com</a>
-            <a href="https://wa.me/595971774994" class="footer__link" target="_blank" rel="noopener">📱 +595 971 774 994 (WhatsApp)</a>
             <span class="footer__link">📍 Asunción, Paraguay</span>
-            <span class="footer__link">🕐 Lun-Ven 9:00 - 18:00</span>
+            <span class="footer__link">🕐 Lun-Ven 9:00 - 18:00 (Fuso Orario Paraguay)</span>
           </div>
         </div>
 
         <!-- Contact Form -->
         <div class="footer__column">
-          <h4 class="footer__column-title">Scrivici</h4>
+          <h4 class="footer__column-title">Richiedi Scheda o Preventivo</h4>
           <form class="footer__form" id="contactForm">
             <input type="text" class="footer__input" placeholder="Il tuo nome" required>
             <input type="email" class="footer__input" placeholder="La tua email" required>
-            <textarea class="footer__textarea" placeholder="Il tuo messaggio..." rows="3" required></textarea>
-            <button type="submit" class="btn btn--primary" style="width:100%;">Invia Messaggio</button>
+            <textarea class="footer__textarea" placeholder="Quale auto o modello cerchi?" rows="3" required></textarea>
+            <button type="submit" class="btn btn--primary" style="width:100%;">Invia Richiesta</button>
           </form>
         </div>
 
@@ -716,33 +1213,58 @@
 
       <div class="footer__bottom">
         <p class="footer__copy">
-          © 2024 SudAmerica Auto Elite. Tutti i diritti riservati.
+          © 2024 SudAmerica Auto Elite. Tutti i diritti riservati. Dealer Autorizzato Asunción, Paraguay.
         </p>
         <div class="footer__legal">
           <a href="#">Privacy Policy</a>
           <a href="#">Termini di Servizio</a>
-          <a href="#">Cookie Policy</a>
+          <a href="#">Garanzie &amp; Condizioni</a>
         </div>
       </div>
     </div>
   </footer>
 
 
-  <!-- ===== Car Detail Modal ===== -->
+  <!-- ===== Enhanced Car Detail Modal ===== -->
   <div class="modal-overlay" id="carModal">
     <div class="modal">
       <button class="modal__close" onclick="closeModalGlobal()" aria-label="Chiudi">✕</button>
 
       <div class="modal__image">
-        <img src="" alt="Dettaglio auto" loading="lazy">
+        <img src="" alt="Dettaglio auto" id="modalMainImg" loading="lazy">
+      </div>
+
+      <!-- Gallery multi-angle switcher -->
+      <div class="modal__gallery-tabs">
+        <button class="modal__gallery-tab active" data-view="front">📸 Vista Frontale</button>
+        <button class="modal__gallery-tab" data-view="side">📐 Profilo &amp; Linea</button>
+        <button class="modal__gallery-tab" data-view="engine">⚙️ Vano Motore</button>
+        <button class="modal__gallery-tab" data-view="interior">💺 Interni &amp; Cruscotto</button>
       </div>
 
       <div class="modal__body">
-        <span class="modal__badge"></span>
-        <h2 class="modal__title"></h2>
-        <p class="modal__year"></p>
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem;">
+          <div>
+            <span class="modal__badge"></span>
+            <h2 class="modal__title"></h2>
+            <p class="modal__year"></p>
+          </div>
+          <button class="modal__share-btn" id="modalShareBtn" title="Copia link scheda">
+            🔗 Condividi Scheda
+          </button>
+        </div>
+
         <p class="modal__description"></p>
 
+        <!-- Compliance & Heritage Checklist -->
+        <div class="modal__checklist">
+          <div class="modal__check-item"><span>✓</span> Matching Numbers Certificato</div>
+          <div class="modal__check-item"><span>✓</span> Zero Ruggine Passante</div>
+          <div class="modal__check-item"><span>✓</span> Pronta per Iscrizione ASI / CRS</div>
+          <div class="modal__check-item"><span>✓</span> Ispezione 120 Punti Inclusa</div>
+        </div>
+
+        <!-- Technical Specs -->
         <div class="modal__specs">
           <div class="modal__spec">
             <div class="modal__spec-label">Motore</div>
@@ -766,23 +1288,33 @@
 
         <div class="modal__actions">
           <a href="https://wa.me/595971774994" id="modalWhatsappBtn" target="_blank" rel="noopener" class="btn btn--primary">
-            💬 Chiedi su WhatsApp
+            💬 Chiedi Scheda su WhatsApp
           </a>
-          <a href="#contatti" class="btn btn--secondary" onclick="closeModalGlobal()">
-            ✉ Richiedi Info via Email
-          </a>
+          <button class="btn btn--secondary" id="modalCalcLinkBtn">
+            🧮 Calcola Costi Totali
+          </button>
         </div>
       </div>
     </div>
   </div>
 
 
-  <!-- Back to Top -->
+  <!-- Back to Top Button -->
   <button class="back-to-top" id="backToTop" aria-label="Torna in cima">
     <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
       <polyline points="18 15 12 9 6 15"></polyline>
     </svg>
   </button>
+
+  <!-- Live Social Proof Activity Ticker -->
+  <div class="social-ticker" id="socialTicker">
+    <div class="social-ticker__avatar" id="socialTickerAvatar">🏎️</div>
+    <div class="social-ticker__content">
+      <div class="social-ticker__message" id="socialTickerMsg">Un collezionista di Milano ha richiesto la scheda della Lancia Delta HF</div>
+      <div class="social-ticker__time" id="socialTickerTime">Adesso · Ispezione Verificata</div>
+    </div>
+    <span class="social-ticker__close" id="socialTickerClose" title="Chiudi notifica">✕</span>
+  </div>
 
   <!-- WhatsApp Floating Button -->
   <a href="https://wa.me/595971774994?text=Ciao!%20Vorrei%20informazioni%20su%20un'auto%20dal%20catalogo." 
